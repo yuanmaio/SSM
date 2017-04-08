@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.project.dao.MerchandiseDao">
+
+	<!--用户登录-->
+	<select id="selectList" resultType="com.test.project.bean.merchandise">
+		SELECT
+		   id,create_time,update_time,name,number,description
+        FROM merchandise
+	</select>
+	<!--
+	<select id="login" resultType="java.lang.String">
+		SELECT
+		user_id,
+		user_name,
+		user_password,
+		user_nick
+		FROM user
+		WHERE user_name = #{username}
+		AND user_password = #{password};
+	</select>
+-->
+</mapper>
